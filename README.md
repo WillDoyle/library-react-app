@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+React Library Application
+Welcome to the documentation for our React-based library application! This library app allows users to explore, discover, and purchase books. The main functionalities include browsing featured books, exploring various genres, viewing book details, managing a shopping cart, and more.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Table of Contents
+Installation
+File Structure
+Components
+State Management
+Routing
+Hooks
+Installation
+To get started with the application, follow these steps:
 
-## Available Scripts
+Clone the repository:
 
-In the project directory, you can run:
+bash
+Copy code
+git clone https://github.com/your-username/library-app.git
+Install dependencies:
 
-### `npm start`
+bash
+Copy code
+cd library-app
+npm install
+Run the application:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copy code
+npm start
+Now you should have the application up and running locally!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+File Structure
+The key files and directories in the project include:
 
-### `npm test`
+src/components: Contains individual React components.
+src/pages: Holds the main page components like Home, Books, BookInfo, and Cart.
+src/data.js: Provides sample book data.
+src/index.css: Stylesheet for the application.
+src/App.js: The main entry point of the application.
+Components
+The application is composed of several React components, each serving a specific purpose. Here's a brief overview of some key components:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Discounted: Component for displaying discounted books.
+Explore: Component for exploring books by genre.
+Featured: Component showcasing featured books.
+Highlights: Component displaying book highlights.
+Landing: Component for the landing page.
+Nav: Navigation bar component.
+Footer: Footer component.
+Home: Home page component.
+Books: Component for displaying a list of books.
+BookInfo: Component for detailed information about a specific book.
+Cart: Component for managing the shopping cart.
+State Management
+Cart State
+The App component manages the cart state using the useState hook. The cart state is an array containing book objects with an added quantity property to represent the number of items in the cart.
 
-### `npm run build`
+Functions for cart management:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+addToCart: Adds a book to the cart.
+changeQuantity: Modifies the quantity of a specific book in the cart.
+removeItem: Removes a book from the cart.
+The cart state is passed down to relevant components to ensure a consistent view of the shopping cart throughout the application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Skeleton Loading State
+The application provides a seamless user experience by implementing skeleton loading states. These states are displayed while the content is being fetched, ensuring a visually appealing transition for the user.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Routing
+The application uses the react-router-dom library for navigation. The Routes component in the App file defines the different routes, each associated with a specific page component.
 
-### `npm run eject`
+Example routes:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+/: Home page
+/books: Books page
+/books/:id: Book details page
+/cart: Shopping cart page
+Hooks
+The useEffect hook is utilized to log the cart state whenever it changes. This can be helpful for debugging and monitoring changes to the shopping cart in real-time.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+javascript
+Copy code
+useEffect(() => {
+  console.log(cart);
+}, [cart]);
+Feel free to explore and customize the application based on your requirements. Happy coding!
