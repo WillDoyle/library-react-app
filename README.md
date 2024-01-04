@@ -1,4 +1,4 @@
-# React Library Application
+# React 'Library' Web-Application
 
 Welcome to the documentation for our React-based library application! This library app allows users to explore, discover, and purchase books. The main functionalities include browsing featured books, exploring various genres, viewing book details, managing a shopping cart, and more.
 
