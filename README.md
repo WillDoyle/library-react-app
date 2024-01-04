@@ -90,3 +90,6 @@ The `useEffect` hook is utilized to log the cart state whenever it changes. This
 useEffect(() => {
   console.log(cart);
 }, [cart]);
+
+```
+.md partially formatted by ChatGPT
