@@ -1,7 +1,7 @@
-React Library Application
+# React Library Application
 Welcome to the documentation for our React-based library application! This library app allows users to explore, discover, and purchase books. The main functionalities include browsing featured books, exploring various genres, viewing book details, managing a shopping cart, and more.
 
-Table of Contents
+# Table of Contents
 Installation
 File Structure
 Components
@@ -77,8 +77,7 @@ Example routes:
 Hooks
 The useEffect hook is utilized to log the cart state whenever it changes. This can be helpful for debugging and monitoring changes to the shopping cart in real-time.
 
-javascript
-Copy code
+
 useEffect(() => {
   console.log(cart);
 }, [cart]);
